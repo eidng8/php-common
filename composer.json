@@ -1,0 +1,35 @@
+{
+  "name": "eidng8/php-common",
+  "description": "Commonly used shortcuts and helpers",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "eidng8",
+      "email": "cheung.jackey@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.1",
+    "squizlabs/php_codesniffer": "^3.2"
+  },
+  "autoload": {
+    "files": [
+      "src/utils.php"
+    ],
+    "exclude-from-classmap": [
+      "tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "eidng8\\Tests\\": "tests/"
+    }
+  },
+  "suggest": {
+    "league/uri": "The library is a meta package which provides simple and intuitive classes to parse, validate and manipulate URIs and their components"
+  }
+}
