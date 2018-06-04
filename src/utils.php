@@ -60,6 +60,23 @@ function primitive_val($var)
     return $var;
 }
 
+function carbon($date)
+{
+    if ($date instanceof Carbon\Carbon) {
+        return $date;
+    }
+
+    if ($date instanceof DateTime) {
+        return Carbon\Carbon::instance($date);
+    }
+
+    if (is_numeric($date)) {
+        return Carbon\Carbon::createFromTimestampUTC($date);
+    }
+
+    return new Carbon\Carbon($date);
+}
+
 //region Boolean Tests
 
 /**
