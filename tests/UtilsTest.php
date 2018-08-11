@@ -179,4 +179,11 @@ class UtilsTest extends TestCase
         rmdir_recursive($tmp);
         self::assertFileNotExists($tmp);
     }
+
+
+    public function testHasChinese()
+    {
+        self::assertTrue(hasChinese('ab以de'));
+        self::assertFalse(hasChinese('abcde'));
+    }
 }

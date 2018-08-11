@@ -232,6 +232,11 @@ function path_join(...$paths): string
     );
 }
 
+function hasChinese(string $str): bool
+{
+    return 1 == preg_match('/\p{Han}/u', $str);
+}
+
 /**
  * Generate a string that can be used by SQL `LIKE` operator.
  *
